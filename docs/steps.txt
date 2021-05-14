@@ -1,0 +1,24 @@
+Train on n & n+1 year				|
+Test on (n+2)th year				|
+						|
+Hourly slots					|
+Daily slots					|
+						|
+Cache like Knapsack Problem			|
+						|
+plot--> Percent of queries vs alpha plot	|
+						|
+RR(alpha) --> alpha vs cost plot		|
+						|
+______________________________________________________________________________
+
+Step 1: Make training data ready --> remove duplicates, and find profit.
+
+Step 2: Cache.
+
+Step 3: Test queries--generate forward and number/slot 	(for hourly and daily).
+
+Step 4: Run on RR(alpha).
+
+Step 5: Conclusion.
+______________________________________________________________________________
