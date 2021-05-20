@@ -21,17 +21,17 @@ Nodes are given as (x,y) pairs.
 ---
 
 ### Data Preparation
-- #### Step 1: Extracting query logs from trajectory data
+- #### 1: Extracting query logs from trajectory data
 For each trajectory, the start and end locations are chosen as source and destination nodes. Each query is a set of three attributes, i.e., source node, destination node, and timestamp (date & time of the start of the trip).
 This dataset contains 18,670 trajectories.
 For more details: https://heremaps.github.io/pptk/tutorials/viewer/geolife.html , http://research.microsoft.com/en-us/downloads/b16d359d-d164-469e-9fd4-daa38f2b2e13/
-- #### Step 2: Mapping lon-lat to x-y (i.e. x <- lon, y <- lat) using UTM projection
+- #### 2: Mapping lon-lat to x-y (i.e. x <- lon, y <- lat) using UTM projection
 We have applied the UTM projection on GPS points in UTM zone 50 (Beijing’s UTM zone).
 UTM projection is able to convert lat-lon coordinates into units of meters while only introducing a relatively small amount of stretching/shrinking between points in the same UTM zone.
-- #### Step 3: Matching Queries with Road Network using Voronoi Diagram
+- #### 3: Matching Queries with Road Network using Voronoi Diagram
 The x-y GPS queries are now matched with the road network nodes before moving on to the step. In the Voronoi approach, each query is matched to its nearest(Euclidean distance) possible network node. (up to a threshold of 150 meters)
 Note: Any query with nearest node more than 150 meters away are dropped. 150 meters is a reasonable value, we tried with other value as well and then settled for this.
-- #### Step 4: Djikstra’s Method to calculate the shortest path from source to destination
+- #### 4: Djikstra’s Method to calculate the shortest path from source to destination
 
 ---
 
